@@ -11,3 +11,200 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  overflow: hidden;
+}
+
+.navbar {
+  position: relative;
+  top: 0;
+  padding: 1rem;
+  width: 100%;
+  background: white;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+  transition: .3s top;
+}
+
+.navbar > #menu {
+  float: right;
+  padding-right: 1rem;
+}
+
+.navbar > #menu > a {
+  padding: 1rem;
+}
+
+#root {
+  width: 20rem;
+  margin: 5rem auto;
+}
+
+#question, #answer {
+  text-align: center;
+  padding: .5rem;
+}
+
+#question {
+  position: absolute;
+  top: -20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 800;
+  transition: .5s all;
+}
+
+#answer {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .5s all;
+}
+
+#answerButton {
+  position: absolute;
+
+  font-size: 2rem;
+  font-weight: 200;
+  color: rgb(65, 65, 65);
+
+  width: auto;
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#answerButton:focus{
+  outline: none;
+}
+
+#progress{
+  position: absolute;
+  top: 22.5rem;
+  width: 0rem;
+  height: .2rem;
+  background: rgb(95, 151, 255);
+
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10rem;
+  transition: .5s all;
+}
+
+#search {
+  position: absolute;
+  font-size: 1rem;
+  opacity: 0;
+  transition: .3s top left;
+  transition: .5s opacity;
+  user-select: none;
+
+  background: white;
+  padding: .5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2px black;
+  z-index: 9999;
+}
+
+@media only screen and (max-width: 768px){
+  .navbar {
+    position: relative;
+    top: 0;
+    padding: 1rem;
+    width: 100%;
+    background: white;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.144);
+    transition: .3s top;
+  }
+  
+  .navbar > #menu {
+    float: right;
+    padding-right: 1rem;
+  }
+  
+  .navbar > #menu > a {
+    padding: .4rem;
+    font-size: .8rem;
+  }
+  
+  #root {
+    width: 20rem;
+    margin: 5rem auto;
+  }
+  
+  #question, #answer {
+    text-align: center;
+    padding: .5rem;
+  }
+  
+  #question {
+    position: absolute;
+    top: -20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 800;
+    transition: .5s all;
+  }
+  
+  #answer {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s all;
+  }
+  
+  #answerButton {
+    position: absolute;
+  
+    font-size: 2rem;
+    font-weight: 200;
+    color: rgb(65, 65, 65);
+  
+    width: auto;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #answerButton:focus{
+    outline: none;
+  }
+  
+  #progress{
+    position: absolute;
+    top: 22.5rem;
+    width: 0rem;
+    height: .2rem;
+    background: rgb(95, 151, 255);
+  
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10rem;
+    transition: .5s all;
+  }
+  
+  #search {
+    position: absolute;
+    font-size: 1rem;
+    opacity: 0;
+    transition: .3s top left;
+    transition: .5s opacity;
+    user-select: none;
+  
+    background: white;
+    padding: .5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px black;
+    z-index: 9999;
+  }
+}

@@ -4,6 +4,7 @@ import './App.css';
 import questionLoader from './questionimporter.js';
 import answerLoader from './answerimporter.js'; 
 
+
 class Merger extends React.Component {
   constructor(props){
     super(props);
@@ -15,11 +16,6 @@ class Merger extends React.Component {
     }
     this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
   }
-   /* this.setState({
-      clicks: this.state.clicks + 1
-    }, () => {
-      console.log("is", this.state.clicks)
-    });*/
 
   forceUpdateHandler(){
     this.setState({
@@ -28,44 +24,35 @@ class Merger extends React.Component {
     }, function(){
       const question = document.getElementById("question");
       const answer = document.getElementById("answer");
-      
-      //if(!this.state.showAnswer){
-        document.getElementById("answerButton").innerHTML = "Show me answer";
-        questionLoader(question, this.state.random);
-        answer.innerHTML = "";
-        this.setState(state =>({
-          showAnswer: true,
-        }));
-     // }
+    
+      document.getElementById("answerButton").innerHTML = "Show me answer";
+      questionLoader(question, this.state.random);
+      answer.innerHTML = "";
+      this.setState(state =>({
+        showAnswer: true,
+      }));
       
       if(this.state.showAnswer){
         answerLoader(answer, this.state.random);
         this.setState(state =>({
           showAnswer: false,
           random: Math.floor(Math.random() * 9) + 1
-        }))
+        }));
         document.getElementById("answerButton").innerHTML = "Ask me another question";
       }
-      /*else{
-        answerLoader(answer, this.state.random);
-          this.setState(state =>({
-            random: Math.floor(Math.random() * 9) + 1
-          }))
-          document.getElementById("answerButton").innerHTML = "Ask me question";
-      }*/
     });
-
-      //random: Math.floor(Math.random() * 3),
   };
+
 
   render(){
     return(
       <div>
-        <div id="question">
-        </div>
+        <a id="question">
+        </a>
         <div id="answer">
         </div>
-        <button id="answerButton" onClick = {this.forceUpdateHandler}> Ask me a question </button>
+        <button id="answerButton" onClick = {this.forceUpdateHandler}>Ask me a question</button>
+        <div id="progress"></div>
       </div>
     )
   }
@@ -76,6 +63,32 @@ class App extends React.Component {
     super();
   }
   
+  componentDidMount(){
+    const script = document.createElement("script");
+    script.async = true;
+    //script.type = "babel/text";
+    script.src = "/vendor/animations.js";
+    document.head.appendChild(script);
+
+    const linkFetcher = (element) => {
+      let array = [];
+      for(let i = 0; i < element.innerHTML.length; i++){
+        if(element.innerHTML[i] === ' '){
+          array.push("+");
+        }else{
+          array.push(element.innerHTML[i]);
+        }
+      }
+      return array.join("");
+    }
+
+    document.getElementById("question").addEventListener("click", function(e) {
+      window.open('http://www.google.com/search?q=' + linkFetcher(e.target), '_blank');
+      console.log(e.target.innerHTML);
+      console.log(linkFetcher(e.target));
+    })
+  }
+
   render(){
     return(
       <div>
@@ -85,4 +98,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App

@@ -16,7 +16,7 @@ function questionLoader(element, id) {
 
         httpRequest.onreadystatechange = loadQuestion;
 
-        httpRequest.open('GET', 'content/questions/text_' + id + '.txt');
+        httpRequest.open('GET', 'content/answers/text_' + id + '.txt');
         httpRequest.send();
     }
 

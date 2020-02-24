@@ -1,10 +1,9 @@
-
 function answerLoader(element, id) {
     var httpRequest;
 
     const elementToPut = element;
 
-    makeRequest()
+    makeRequest();
 
     function makeRequest(){
         httpRequest = new XMLHttpRequest();
@@ -29,6 +28,7 @@ function answerLoader(element, id) {
             }
         }
     }
+
 };
 
 export default answerLoader;
