@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/AskMeAQuestion/static/css/main.a6942fb2.chunk.css",
+    "main.js": "/AskMeAQuestion/static/js/main.9287b1c5.chunk.js",
+    "main.js.map": "/AskMeAQuestion/static/js/main.9287b1c5.chunk.js.map",
+    "runtime-main.js": "/AskMeAQuestion/static/js/runtime-main.0af4138b.js",
+    "runtime-main.js.map": "/AskMeAQuestion/static/js/runtime-main.0af4138b.js.map",
+    "static/js/2.5d4ca26d.chunk.js": "/AskMeAQuestion/static/js/2.5d4ca26d.chunk.js",
+    "static/js/2.5d4ca26d.chunk.js.map": "/AskMeAQuestion/static/js/2.5d4ca26d.chunk.js.map",
+    "index.html": "/AskMeAQuestion/index.html",
+    "precache-manifest.dcb8a3fb042a0bd8df4baac1900e2c2d.js": "/AskMeAQuestion/precache-manifest.dcb8a3fb042a0bd8df4baac1900e2c2d.js",
+    "service-worker.js": "/AskMeAQuestion/service-worker.js",
+    "static/css/main.a6942fb2.chunk.css.map": "/AskMeAQuestion/static/css/main.a6942fb2.chunk.css.map",
+    "static/js/2.5d4ca26d.chunk.js.LICENSE.txt": "/AskMeAQuestion/static/js/2.5d4ca26d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/AskMeAQuestion/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0af4138b.js",
+    "static/js/2.5d4ca26d.chunk.js",
+    "static/css/main.a6942fb2.chunk.css",
+    "static/js/main.9287b1c5.chunk.js"
+  ]
+}
