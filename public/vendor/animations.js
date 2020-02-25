@@ -1,4 +1,4 @@
-// This file contains animation for button, and questions.
+/*// This file contains animation for button, and questions.
 
 // Gathering window's width/
 let width = window.innerWidth;
