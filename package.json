@@ -1,6 +1,6 @@
 {
-  "homepage": "https://gorskidev.github.io/AskMeAQuestionNew/",
-  "name": "newaskmeaquestion",
+  "homepage": "https://gorskidev.github.io/AskMeAQuestion",
+  "name": "askmeaquestion",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
